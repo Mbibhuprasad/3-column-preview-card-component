@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&family=Lexend+Deca&family=Outfit:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@500&family=Lexend+Deca&family=Outfit:wght@300&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --first-box:hsl(31, 77%, 52%);
+    --secnd-box:hsl(184, 100%, 22%);
+    --third-box:hsl(179, 100%, 13%);
+    --paragraph:hsla(0, 0%, 87%, 0.75);
+    --background:hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--background);
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+
+.container {
+    flex-basis:48.5rem;
+    background-color: brown;
+    display: flex;
+    border-radius: 0.4rem;
+}
+
+.box {
+    padding: 2.5rem;
+}
+
+.box img {
+    width: 3.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.box h1 {
+    font-family: Big Shoulders Display;
+    font-size: 2rem;
+    color: var(--background);
+    margin-bottom: 1.5rem;
+}
+
+.box p {
+    font-family: Lexend Deca;
+    font-size: 0.8rem;
+    color: var(--paragraph);
+    line-height: 1.3rem;
+}
+
+.box button {
+    width: 7.7rem;
+    padding: 0.7rem;
+    border-radius: 1.5rem;
+    margin-top: 4rem;
+    border: 1px solid var(--background);
+    font-family: Lexend Deca;
+}
+
+.box button:hover {
+    cursor: pointer;
+}
+
+.sedans {
+    background-color: var(--first-box);
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.suvs {
+    background-color: var(--secnd-box);
+}
+
+.luxury {
+    background-color: var(--third-box);
+    border-radius:0 0.4rem 0.4rem 0;
+}
+
+.sedans button {
+    color:var(--background);
+    background-color: var(--first-box);
+
+}
+
+.suvs button {
+    color:var(--background);
+    background-color: var(--secnd-box);
+}
+
+.luxury button {
+    color:var(--background);
+    background-color: var(--third-box);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:376px){
+
+    .container {
+        flex-direction: column;
+        margin: 2rem;
+    }
+
+    main {
+        height: 100%;
+    }
+
+    .sedans {
+        border-radius: 0.4rem 0.4rem 0 0;
+    }
+
+    .luxury {
+        border-radius:0 0 0.4rem 0.4rem;
+    }
+
+    .box button {
+        background-color: var(--background);
+    }
+
+    .sedans button {
+        color:var(--first-box);
+    }
+    
+    .suvs button {
+        color:var(--secnd-box);
+    }
+    
+    .luxury button {
+        color:var(--third-box);
+    }
+}
